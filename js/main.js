@@ -1,5 +1,20 @@
-let money, time;
+let money, time,
 
+  start = document.getElementById('start'),
+  value = document.querySelectorAll('.result-table > div:not(.budget):not(.daybudget):not(.level):not(.expenses):not(.optionalexpenses):not(.income):not(.monthsavings):not(.yearsavingsyearsavings)'),
+  expenses = document.getElementsByClassName('expenses-item'),
+  buttons = document.getElementsByTagName('button'),
+  confirmExpenses = buttons[0],
+  confirmOptionalExpenses = buttons[1],
+  countBudget = buttons[2],
+  optionalExpenses = document.querySelector('.data').querySelectorAll('.optionalexpenses-item'),
+  income = document.querySelector('#income'),
+  savings = document.querySelector('#savings'),
+  sum = document.querySelector('#sum'),
+  percent = document.querySelector('#percent');
+
+
+/*
 function start() {
   money = +prompt("Ваш бюджет на месяц?", "");
   time = prompt("Введите дату в формате YYYY-MM-DD", "");
